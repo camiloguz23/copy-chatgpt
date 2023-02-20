@@ -1,0 +1,19 @@
+.cursor {
+  &::after {
+    content: '▋';
+    color: white;
+    animation: tip;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes tip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

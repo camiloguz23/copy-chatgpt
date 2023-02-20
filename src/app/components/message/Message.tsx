@@ -1,13 +1,14 @@
+import { TypeEffect } from '@/components';
 import { type ContentMessage } from '@/models';
 import Image from 'next/image';
 import style from './message.module.scss';
 
-function Message({ message, type }: ContentMessage): JSX.Element {
+function Message({ message, type, last }: ContentMessage): JSX.Element {
   return (
     <div className={`${style.containerMessage} ${style[type]}`}>
       <div className={style.message}>
         <Image src={`/${type}.svg`} width={30} height={30} alt='user' />
-        <p>{message}</p>
+        {type === 'ai' && last ? <TypeEffect textAI={message} /> : <p>{message}</p>}
       </div>
     </div>
   );

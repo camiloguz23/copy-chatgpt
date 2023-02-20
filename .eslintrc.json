@@ -4,11 +4,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "standard-with-typescript",
-    "plugin:react/jsx-runtime"
-  ],
+  "extends": ["plugin:react/recommended", "standard-with-typescript", "plugin:react/jsx-runtime"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -32,6 +28,8 @@
     "indent": "error",
     "@typescript-eslint/member-delimiter-style": "off",
     "dot-notation": "off",
-    "@typescript-eslint/dot-notation": "off"
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "no-useless-return": "error"
   }
 }
