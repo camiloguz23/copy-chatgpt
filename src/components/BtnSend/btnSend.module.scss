@@ -17,4 +17,11 @@
         caret-color: white;
         color: $text;
     }
+
+    button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
 }

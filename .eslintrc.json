@@ -30,6 +30,8 @@
     "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
     "no-unneeded-ternary": "error",
     "indent": "error",
-    "@typescript-eslint/member-delimiter-style": "off"
+    "@typescript-eslint/member-delimiter-style": "off",
+    "dot-notation": "off",
+    "@typescript-eslint/dot-notation": "off"
   }
 }

@@ -1,0 +1,21 @@
+@import '../../../style/color.scss';
+.containerMessage {
+  width: 100%;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+
+  &.ai {
+    background-color: $gra-message-ai;
+  }
+
+  .message {
+    display: flex;
+    width: 70%;
+    align-items: center;
+
+    p {
+      margin-left: 20px;
+    }
+  }
+}
