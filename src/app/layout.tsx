@@ -1,18 +1,17 @@
-import './globals.css'
+import './globals.scss';
+import { Roboto } from '@next/font/google';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const roboto = Roboto({
+  weight: ['300', '400', '700'],
+  style: ['italic', 'normal'],
+  subsets: ['latin'],
+  variable: '--roboto'
+});
+
+export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+    <html lang='es' className={roboto.className}>
       <body>{children}</body>
     </html>
-  )
+  );
 }

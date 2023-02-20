@@ -1,0 +1,24 @@
+.containerChat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .ContainerMessage,
+  .btnSend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ContainerMessage {
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  .btnSend {
+    height: 10vh;
+    justify-content: center;
+  }
+}
