@@ -3,7 +3,7 @@ import { type ContentMessage } from '@/models';
 import Image from 'next/image';
 import style from './message.module.scss';
 
-function Message({ message, type, last }: ContentMessage): JSX.Element {
+function Message({ message, type, last, loading }: ContentMessage): JSX.Element {
   return (
     <div className={`${style.containerMessage} ${style[type]}`}>
       <div className={style.message}>
