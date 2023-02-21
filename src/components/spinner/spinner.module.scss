@@ -1,0 +1,43 @@
+.spinner {
+    width: fit-content;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    
+
+    .miniSpinner {
+        background-color: white;
+        width: 6px;
+        height: 100%;
+        margin: 0 1px;
+        animation: spinner 1s linear infinite;
+
+        &.spinner1 {
+            animation-delay: -0.50s;
+        }
+
+        &.spinner2 {
+            animation-delay: -0.40s;
+        }
+
+        &.spinner3 {
+            animation-delay: -0.30s;
+        }
+        &.spinner4 {
+            animation-delay: -0.20s;
+        }
+
+        &.spinner5 {
+            animation-delay: 0s;
+        }
+    }
+}
+
+@keyframes spinner  {
+    50%{
+        transform: scaleY(2.5);
+    }
+}

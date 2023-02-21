@@ -1,5 +1,5 @@
 'use client';
-import { BtnSend } from '@/components';
+import { BtnSend, Spinner } from '@/components';
 import { useOpenAI } from '@/hooks';
 import { type ContentMessage } from '@/models';
 import { useState } from 'react';
@@ -14,7 +14,7 @@ function ContainerChat(): JSX.Element {
   const getResponse = async (question: string, list: ContentMessage[]): Promise<void> => {
     const structure: string = `${messageApi}Q:${question}-A:`;
     const data = await makeQuery(structure);
-    const { text } = data.choices[0];
+    const { text } = data?.choices[0];
     const structureApi = `Q:${question}-A:${text}-`;
     setMessageApi(`${messageApi}${structureApi}`);
     setMessageList([...list, { message: text, type: 'ai' }]);
@@ -25,6 +25,7 @@ function ContainerChat(): JSX.Element {
         {messageList.map((item, index) => (
           <Message key={index} message={item.message} type={item.type} last={index + 1 === messageList.length} />
         ))}
+        {loading && <Spinner />}
       </div>
       <div className={style.btnSend}>
         <BtnSend
@@ -33,6 +34,7 @@ function ContainerChat(): JSX.Element {
             setMessageList(updateList);
             void getResponse(question, updateList);
           }}
+          loading={loading}
         />
       </div>
     </div>

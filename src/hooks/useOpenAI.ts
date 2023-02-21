@@ -12,10 +12,11 @@ export const useOpenAI = (): useOpen => {
 
   const makeQuery = async (question: string): Promise<OpenAiContent> => {
     let data: OpenAiContent;
+    setLoading(true)
     try {
       const response = await sendToOpenAi(question);
       data = response;
-      setLoading(true);
+      setLoading(false);
       return data;
     } catch (error) {
       throw Error('error');

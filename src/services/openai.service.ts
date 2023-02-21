@@ -6,7 +6,7 @@ export const sendToOpenAi = async (question: string): Promise<OpenAiContent> => 
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
-      Authorization: `Bearer ${'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'}`
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY ?? ''}`
     },
     body: JSON.stringify({
       model: 'text-davinci-003',
