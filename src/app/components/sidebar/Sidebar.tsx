@@ -8,7 +8,7 @@ function Sidebar(): JSX.Element {
         <ButtonPlus />
       </div>
       <div className={style.subIcon}>
-        <hr className={style.line}/>
+        <hr className={style.line} />
       </div>
     </div>
   );

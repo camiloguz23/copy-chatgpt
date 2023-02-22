@@ -1,19 +1,19 @@
-@import "../../style/color.scss";
+@import '../../style/color.scss';
 .button {
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid $gra-message-ai;
-    border-radius: 6px;
-    padding: 12px 10px;
-    color: $text;
-    text-align: left;
-    cursor: pointer;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid $gra-message-ai;
+  border-radius: 6px;
+  padding: 12px 10px;
+  color: $text;
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
 
-    i {
-        margin-right: 20px;
-        font-size: 13px;
-    }
+  i {
+    margin-right: 20px;
+    font-size: 13px;
+  }
 }

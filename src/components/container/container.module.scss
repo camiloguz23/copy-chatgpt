@@ -1,9 +1,9 @@
-@import "../../style/color.scss";
+@import '../../style/color.scss';
 .container {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 14% 86%;
-    background-color: $gray-background;
-    color: $text;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 14% 86%;
+  background-color: $gray-background;
+  color: $text;
 }

@@ -22,6 +22,7 @@ function ContainerChat(): JSX.Element {
     const { text } = data?.choices[0];
     setMessageList([...list, { message: text, type: 'ai' }]);
   };
+
   return (
     <div className={style.containerChat}>
       <div className={style.ContainerMessage} id='bodyMessage'>
