@@ -17,7 +17,7 @@ function BtnSend({ onSend, loading = false }: Prop): JSX.Element {
 
   return (
     <form className={style.form} onSubmit={onSubmitData}>
-      <input type='text' name='question' id='' />
+      <input type='text' name='question' id='' disabled={loading} autoFocus/>
       <button type='submit' className='material-symbols-outlined' disabled={loading}>
         send
       </button>
