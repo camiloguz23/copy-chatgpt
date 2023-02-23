@@ -12,14 +12,13 @@ function ContainerChat(): JSX.Element {
 
   useEffect(() => {
     const body: HTMLElement = document.getElementById('bodyMessage')!;
-    console.log('div2', body.scrollTop);
     body.scroll(0, 1900);
   }, [messageList]);
 
   const getResponse = async (question: string, list: ContentMessage[]): Promise<void> => {
     const structure: string = `Q:${question}-A:`;
-    const data = await makeQuery(structure);
-    const { text } = data?.choices[0];
+    const { data } = await makeQuery(structure);
+    const { text } = data.choices[0];
     setMessageList([...list, { message: text, type: 'ai' }]);
   };
 
