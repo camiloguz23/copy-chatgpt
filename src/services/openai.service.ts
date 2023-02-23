@@ -12,7 +12,7 @@ export const sendToOpenAi = async (question: string): Promise<any> => {
     model: 'text-davinci-003',
     prompt: `${question}`,
     temperature: 0,
-    max_tokens: 100,
+    max_tokens: 4000,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
