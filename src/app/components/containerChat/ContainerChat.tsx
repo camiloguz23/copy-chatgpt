@@ -13,6 +13,7 @@ function ContainerChat(): JSX.Element {
   useEffect(() => {
     const body: HTMLElement = document.getElementById('bodyMessage')!;
     body.scroll(0, 1900);
+    console.log('aaa')
   }, [messageList]);
 
   const getResponse = async (question: string, list: ContentMessage[]): Promise<void> => {
